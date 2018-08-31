@@ -35,3 +35,25 @@ If needing to select a specific Python version when using ``oc new-app``, you sh
 ```
 oc new-app python:2.7~https://github.com/OpenShiftDemos/os-sample-python.git
 ```
+
+
+### Followint tutorial
+
+https://blog.openshift.com/getting-started-python/
+
+**notes and commands**
+
+```
+oc login https://cmqe-smicro-628-b14.cmqe.lab.eng.rdu2.redhat.com:8443 --token=******
+oc new-app python~https://github.com/eduardocerqueira/os-sample-python.git --name myapp
+oc expose svc/myapp
+oc status
+```
+after code changes, run new build
+
+```
+oc start-build myapp
+```
+
+
+
